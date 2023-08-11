@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Projecto de clonación Text to Speech del Neng de Castefa.</title>
+	    <style>
+        audio {
+            width: 200px;
+        }
+		        th {
+            padding: 10px;
+        }
+        td, th {
+            text-align: center;
+        }
+		        body {
+            margin: 20px;
+        }
+
+        h3, p {
+            margin-left: 20px;
+        }
+		
+		p {
+			text-align: justify;
+		}
+    </style>
+</head>
+
+<body>
+
+<h1><center>Projecto de clonación Text to Speech del Neng de Castefa.</h1>
+
+<h4><center><a href="#introduccion">Introducción</a> | <a href="#desafios">Desafíos en la Clonación de la Voz del Neng de Castefa</a> | <a href="#tecnologias">Tecnologías de Síntesis de Voz Utilizadas</a> | <a href="#experimentos">Experimentos y Resultados</a> | <a href="#conclusiones">Conclusiones</a></h4>
+<hr>
+<h2 id="introduccion">Introducción</h2>
+
+<p>El objetivo de este documento es examinar en detalle los desafíos y complejidades involucrados en el intento de clonar la distintiva voz del Neng de Castefa utilizando tecnologías de síntesis de voz (TTS). A lo largo de este documento, exploraremos las dificultades inherentes en la reproducción de su estilo vocal único y las técnicas utilizadas para abordar este desafío.</p>
+
+<h2 id="desafios">Desafíos en la Clonación de la Voz del Neng de Castefa</h2>
+
+<h3 id="singularidad">Singularidad Vocal</h3>
+
+<p>Se discutirá cómo la voz del Neng de Castefa posee características únicas, como su tono, ritmo y entonación específicos, que lo distinguen de otras voces.</p>
+
+<h3 id="expresion">Expresión y Emoción</h3>
+
+<p>Exploraremos cómo Neng de Castefa infunde sus expresiones y emociones en su habla, lo que agrega una capa adicional de dificultad para replicar su estilo de manera auténtica.</p>
+
+<h3 id="linguisticos">Aspectos Lingüísticos</h3>
+
+<p>Se abordarán los matices lingüísticos y jergas particulares utilizadas por Neng de Castefa, lo que presenta desafíos en la generación de habla que captura adecuadamente su estilo característico.</p>
+
+<h2 id="tecnologias">Tecnologías de Síntesis de Voz Utilizadas</h2>
+
+<h3 id="tacotron"><a href="https://github.com/NVIDIA/tacotron2">Tacotron 2</a></h3>
+
+<p>Se examinará cómo la técnica de síntesis de voz Tacotron 2 ha sido empleada en el intento de replicar la voz del Neng de Castefa, destacando sus éxitos y limitaciones.</p>
+
+<h3 id="piper"><a href="https://github.com/rhasspy/piper">Piper</a></h3>
+
+<p>Se discutirán los enfoques y resultados obtenidos utilizando la herramienta Piper para recrear la voz única del Neng de Castefa, señalando sus ventajas y desafíos.</p>
+
+<h2 id="experimentos">Experimentos y Resultados</h2>
+
+<p>En esta sección, se describirán los experimentos realizados para clonar la voz del Neng de Castefa utilizando las tecnologías mencionadas anteriormente. Se presentarán ejemplos de los resultados generados y se analizará la similitud con la voz original.</p>
+<p>Ahora, se motrarán los resultados y acto seguido explicaré los problemas que obtenga por estos TTS. Usaré tanto frases cortas como largas. <br> A futuro probaré con más TTS para ver sus resultados.</p>
+<table border="1">
+    <tr>
+        <th>TTS usado</th>
+        <th>¿Qué pasa Neng? Soy el Neng de Castefa<br>y esto es una prueba de audio.</th>
+        <th>¡Eh, peña de GitHub! Aquí llega el Neng de Castefa<br>para montar el tinglao y probar mi TTS.<br>¡Vamos allá, Nengs!</th>
+        <th>¡A darle caña, tigre! ¡Esto es puro<br>Neng en acción! ¡Pá pum, Neng!</th>
+        <th>¿Qué pasa, Neng? Aquí dándole con<br>todo, ¡a tope de power, peñita!</th>
+    </tr>
+    <tr>
+        
+        <td><center>Tacotron 2</td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/taco1.wav?raw=true" type="audio/mpeg"></audio></td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/taco2.wav?raw=true" type="audio/mpeg"></audio></td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/taco3.wav?raw=true" type="audio/mpeg"></audio></td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/taco4.wav?raw=true" type="audio/mpeg"></audio></td>
+    </tr>
+    <tr>
+        <td><center>Piper</td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/piper1.wav?raw=true" type="audio/mpeg"></audio></td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/piper2.wav?raw=true" type="audio/mpeg"></audio></td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/piper3.wav?raw=true" type="audio/mpeg"></audio></td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/piper4.wav?raw=true" type="audio/mpeg"></audio></td>
+    </tr>
+</table>
+
+<h3>Problemas</h3>
+
+<p>Como podemos escuchar, el modelo Tacotron 2 está completamente destrozado. Algunas de las suposiciones son:</p>
+<ul>
+	<li>Mala calidad de audio: El audio usado es antiguo, principalmente sacado de grabaciones subidas a YouTube en calidad baja. Por no hablar de que el divisor de audio, acapella y música, no era el mejor.</li>
+	<li>Repeticiones: Neng repite muchas veces "Neng" y otras jergas suyas. Esto puede causar a Tacotron algún problema.</li>
+	<li>Gritos y vocalización: Neng grita mucho, cuando grita, menos suele vocalizar. A veces cuando habla, es tan rápido que puede también ser un problema.</li>
+</ul>
+<p>En cuanto a Piper, logró su misión, hacer que hable. Aún así, no es totalmente bueno y los problemas que le veo son:</p>
+<ul>
+	<li>No es el TTS correcto: Piper no está preparado para hacer modelos gritones como tal, ya que trata de neutralizar el habla y crea un grito y habla normal extraño.</li>
+	<li>Las exclamaciones le hacen sonar cortado: Cuando coloco exclamación, se nota que se sube tanto el tono y el sonido que crea recortes en la voz.</li>
+</ul>
+
+<h2 id="conclusiones">Conclusiones</h2>
+
+<p>A lo largo de este documento, hemos explorado las múltiples dificultades que surgen al intentar clonar la voz del Neng de Castefa. Su singular estilo vocal, la expresión emocional y los aspectos lingüísticos presentan desafíos significativos en la síntesis de voz. Aunque las tecnología Piper ha brindado resultados prometedores, queda claro que replicar auténticamente la voz del Neng de Castefa sigue siendo un desafío complejo.</p>
+</body>
+
+</html>
