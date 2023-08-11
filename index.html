@@ -31,7 +31,7 @@
 
 <h1><center>Projecto de clonación Text to Speech del Neng de Castefa.</h1>
 
-<h4><center><a href="#introduccion">Introducción</a> | <a href="#desafios">Desafíos en la Clonación de la Voz del Neng de Castefa</a> | <a href="#tecnologias">Tecnologías de Síntesis de Voz Utilizadas</a> | <a href="#experimentos">Experimentos y Resultados</a> | <a href="#conclusiones">Conclusiones</a></h4>
+<h4><center><a href="#introduccion">Introducción</a> | <a href="#desafios">Desafíos en la Clonación de la Voz del Neng de Castefa</a> | <a href="#tecnologias">Tecnologías de Síntesis de Voz Utilizadas</a> | <a href="#experimentos">Experimentos y Resultados</a> | <a href="#conclusiones">Conclusiones</a> | <a href="dataset">Dataset y Especificaciones de Entrenamiento</a></h4>
 <hr>
 <h2 id="introduccion">Introducción</h2>
 
@@ -61,6 +61,17 @@
 
 <p>Se discutirán los enfoques y resultados obtenidos utilizando la herramienta Piper para recrear la voz única del Neng de Castefa, señalando sus ventajas y desafíos.</p>
 
+<h2 id="dataset">Dataset y Especificaciones de Entrenamiento</h2>
+
+<h3 id="dataset2">Dataset</h3>
+<p>El dataset utilizado para este proyecto consta de 78 audios, cada uno con una duración de 10 a 14 segundos. En total, el dataset representa aproximadamente 14 minutos y 39 segundos de contenido de audio. La selección de un dataset relativamente pequeño se debió a la dificultad de encontrar audios adecuados. La mayoría del material de audio obtenido estaba obsoleto o presentaba problemas de saturación.</p>
+
+<h3 id="entrenamiento-tacotron">Entrenamiento Tacotron 2</h3>
+<p>En el entrenamiento inicial utilizando el modelo Tacotron, se configuró un batch size de 2 y se utilizó un modelo de voz masculina en castellano. Sin embargo, este entrenamiento resultó ser problemático, ya que las gráficas de progreso no mostraron mejoras significativas en la generación de voz.</p><br>Aquí podemos observar una gráfica durante su entrenamiento. Intenta hacer la diagonal, pero no lo logra.<br>
+<img src="https://cdn.discordapp.com/attachments/821410297335513139/1139574197237076029/h9uEJoizlXHdQAAAABJRU5ErkJggg.png" alt="Entrenamiento Tacotron 2" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+<h3 id="entrenamiento-piper">Entrenamiento Piper</h3>
+<p>En contraste, el entrenamiento utilizando la herramienta Piper tuvo un rendimiento más satisfactorio. El modelo fue entrenado durante 20,000 pasos, y aunque no alcanzó la perfección, los resultados fueron decentes y representaron un avance significativo en comparación con el entrenamiento anterior.</p>
+	
 <h2 id="experimentos">Experimentos y Resultados</h2>
 
 <p>En esta sección, se describirán los experimentos realizados para clonar la voz del Neng de Castefa utilizando las tecnologías mencionadas anteriormente. Se presentarán ejemplos de los resultados generados y se analizará la similitud con la voz original.</p>
