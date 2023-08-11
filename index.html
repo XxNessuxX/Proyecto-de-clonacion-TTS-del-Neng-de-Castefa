@@ -31,7 +31,17 @@
 
 <h1><center>Projecto de clonación Text to Speech del Neng de Castefa.</h1>
 
-<h4>| <a href="#introduccion">Introducción</a> | <a href="#desafios">Desafíos en la Clonación de la Voz del Neng de Castefa</a> |<br>| <a href="#tecnologias">Tecnologías de Síntesis de Voz Utilizadas</a> | <a href="dataset">Dataset y Especificaciones de Entrenamiento</a> |<br>| <a href="#experimentos">Experimentos y Resultados</a> | <a href="#conclusiones">Conclusiones</a> |</h4>
+<h2>Índice</h2>
+
+<ul>
+    <li><a href="#introduccion">Introducción</a></li>
+    <li><a href="#desafios">Desafíos en la Clonación de la Voz del Neng de Castefa</a></li>
+    <li><a href="#tecnologias">Tecnologías de Síntesis de Voz Utilizadas</a></li>
+    <li><a href="#dataset">Dataset y Especificaciones de Entrenamiento</a></li>
+    <li><a href="#experimentos">Experimentos y Resultados</a></li>
+    <li><a href="#conclusiones">Conclusiones</a></li>
+	<li><a href="#referencias">Referencias</a></li>
+</ul>
 <hr>
 <h2 id="introduccion">Introducción</h2>
 
@@ -50,7 +60,7 @@
 <h3 id="linguisticos">Aspectos Lingüísticos</h3>
 
 <p>Se abordarán los matices lingüísticos y jergas particulares utilizadas por Neng de Castefa, lo que presenta desafíos en la generación de habla que captura adecuadamente su estilo característico.</p>
-
+<hr>
 <h2 id="tecnologias">Tecnologías de Síntesis de Voz Utilizadas</h2>
 
 <h3 id="tacotron"><a href="https://github.com/NVIDIA/tacotron2">Tacotron 2</a></h3>
@@ -60,7 +70,7 @@
 <h3 id="piper"><a href="https://github.com/rhasspy/piper">Piper</a></h3>
 
 <p>Se discutirán los enfoques y resultados obtenidos utilizando la herramienta Piper para recrear la voz única del Neng de Castefa, señalando sus ventajas y desafíos.</p>
-
+<hr>
 <h2 id="dataset">Dataset y Especificaciones de Entrenamiento</h2>
 
 <h3 id="dataset2">Dataset</h3>
@@ -71,7 +81,7 @@
 <img src="https://cdn.discordapp.com/attachments/821410297335513139/1139574197237076029/h9uEJoizlXHdQAAAABJRU5ErkJggg.png" alt="Gráfica falliada de entrenamiento en Tacotron 2" style="max-width: 40%; height: auto; display: block; margin: 0 auto;">
 <h3 id="entrenamiento-piper">Entrenamiento Piper</h3>
 <p>En contraste, el entrenamiento utilizando la herramienta Piper tuvo un rendimiento más satisfactorio. El modelo fue entrenado durante 10,000 pasos, y aunque no alcanzó la perfección, los resultados fueron decentes y representaron un avance significativo en comparación con el entrenamiento anterior.</p>
-	
+	<hr>
 <h2 id="experimentos">Experimentos y Resultados</h2>
 
 <p>En esta sección, se describirán los experimentos realizados para clonar la voz del Neng de Castefa utilizando las tecnologías mencionadas anteriormente. Se presentarán ejemplos de los resultados generados y se analizará la similitud con la voz original.</p>
@@ -114,10 +124,18 @@
 	<li>No es el TTS correcto: Piper no está preparado para hacer modelos gritones como tal, ya que trata de neutralizar el habla y crea un grito y habla normal extraño.</li>
 	<li>Las exclamaciones le hacen sonar cortado: Cuando coloco exclamación, se nota que se sube tanto el tono y el sonido que crea recortes en la voz.</li>
 </ul>
-
+<hr>
 <h2 id="conclusiones">Conclusiones</h2>
 
 <p>A lo largo de este documento, hemos explorado las múltiples dificultades que surgen al intentar clonar la voz del Neng de Castefa. Su singular estilo vocal, la expresión emocional y los aspectos lingüísticos presentan desafíos significativos en la síntesis de voz. Aunque las tecnología Piper ha brindado resultados prometedores, queda claro que replicar auténticamente la voz del Neng de Castefa sigue siendo un desafío complejo. Estoy pensando hacer un entrenamiento nuevo a futuro con un dataset mejorado en ambos TTS de nuevo, tanto como en otros TTS.</p>
+<hr>
+<h2 id="referencias">Referencias</h2>
+
+<ul>
+    <li><a href="https://github.com/NVIDIA/tacotron2">Repositorio de Tacotron 2</a></li>
+    <li><a href="https://github.com/rhasspy/piper">Repositorio de Piper</a></li>
+</ul>
+
 </body>
 
 </html>
