@@ -73,12 +73,22 @@
 <hr>
 <h2 id="dataset">Dataset y Especificaciones de Entrenamiento</h2>
 
-<h3 id="dataset2">Dataset</h3>
+<h3 id="dataset2">Dataset original (Antiguo)</h3>
 <p>El dataset utilizado para este proyecto consta de 78 audios, cada uno con una duración de 10 a 14 segundos. En total, el dataset representa aproximadamente 14 minutos y 39 segundos de contenido de audio. La selección de un dataset relativamente pequeño se debió a la dificultad de encontrar audios adecuados. La mayoría del material de audio obtenido estaba obsoleto o presentaba problemas de saturación. El formato de los audios son en .wav, 16 bits, mono, 22050 hz.</p>
-
-<h3 id="entrenamiento-tacotron">Entrenamiento Tacotron 2</h3>
-<p>En el entrenamiento inicial utilizando el modelo Tacotron, se configuró un batch size de 2 y se utilizó un modelo de voz masculina en castellano. Sin embargo, este entrenamiento resultó ser problemático, ya que las gráficas de progreso no mostraron mejoras significativas en la generación de voz.<br>Aquí podemos observar una gráfica durante su entrenamiento. Intenta hacer la diagonal, pero no lo logra.<br></p>
-<img src="https://cdn.discordapp.com/attachments/821410297335513139/1139574197237076029/h9uEJoizlXHdQAAAABJRU5ErkJggg.png" alt="Gráfica fallida de entrenamiento en Tacotron 2" style="max-width: 40%; height: auto; display: block; margin: 0 auto;">
+<h3 id="datasetbeta">Dataset nuevo (Beta temporal)</h3>
+<p>Este nuevo dataset se trata de una beta. ¿Por qué beta? Quiero probar si con estos datos de audio va bien por el momento su modelo. Este nuevo dataset contiene tan solo 12:46 minutos de audio, 72 archivos del mismo formato que los anteriores mencionados y fue usado un divisor de música y vocales más eficiente. La calidad se ve más alta, veamos si cumple las espectativas en Tacotron 2. (No lo usaré en Piper hasta tener el dataset completo.)
+<h3 id="entrenamiento-tacotron">Entrenamiento Tacotron 2. (Dataset original antiguo)</h3>
+<p>En el entrenamiento inicial utilizando el modelo Tacotron, se configuró un batch size de 2 y se utilizó un modelo de voz base masculina en castellano. Sin embargo, este entrenamiento resultó ser problemático, ya que las gráficas de progreso no mostraron mejoras significativas en la generación de voz.<br>Aquí podemos observar una gráfica durante su entrenamiento. Intenta hacer la diagonal, pero no lo logra.<br></p>
+<img src="https://cdn.discordapp.com/attachments/821410297335513139/1139574197237076029/h9uEJoizlXHdQAAAABJRU5ErkJggg.png" alt="Gráfica falliada de entrenamiento en Tacotron 2" style="max-width: 40%; height: auto; display: block; margin: 0 auto;">
+<h3 id="entrenamiento-tacotron">Entrenamiento Tacotron 2. (Dataset nuevo beta)</h3>
+<p>El entrenamiento ha ido muy mal. Estuvo 2 horas y media entrenando y para empezar, comentaré los parámetros. Batch size de 2, learning rate de 3e-4, ha llegado a 45 epochs y se utilizó un modelo de voz base masculina en castellano. De ahí en adelante ha comenzado a sobreentrenarse y volverse loco. Las gráficas no son tan diferentes al entrenamiento del modelo del dataset antiguo.<br></p>
+<ul>
+<li>Conclusiones: la pronunciación es el verdadero problema. No es que diga muchas veces "neng" y "tío", el problema es lo tan rápido que habla que a veces le da por balbucear y Tacotron no le entiende bien. Yo, admito, no entendí a veces cosas que dijo y lo saqué de los audios para el dataset.
+<li>Novedades: el audio sacado en el epoch 45 ha logrado decir algunas palabras. En la sección de Experimentos y resultados pondré como suena el modelo, eso sí, serán balbuceos sin sentido. Más bien parece una ametralladora disparando.
+<li>Notas: probaré a usar un learning rate de 1e-4, a ver si es capaz de meterse en profundidad a entender mejor la voz del Neng.
+</ul>
+<p>Adjunto gráfica del epoch 45 de este entrenamiento. Se ve algo mejor que la del entrenamiento con el dataset antiguo.</p>
+<img src="https://cdn.discordapp.com/attachments/821410297335513139/1140091302361448520/D4qka8v3gLiQAAAAAElFTkSuQmCC.png" alt="Gráfica falliada de entrenamiento en Tacotron 2 con dataset nuevo beta." style="max-width: 40%; height: auto; display: block; margin: 0 auto;">
 <h3 id="entrenamiento-piper">Entrenamiento Piper</h3>
 <p>En contraste, el entrenamiento utilizando la herramienta Piper tuvo un rendimiento más satisfactorio. El modelo fue entrenado durante 10,000 pasos, y aunque no alcanzó la perfección, los resultados fueron decentes y representaron un avance significativo en comparación con el entrenamiento anterior.</p>
 	<hr>
@@ -96,11 +106,19 @@
     </tr>
     <tr>
         
-        <td><center>Tacotron 2</td>
+        <td><center>Tacotron 2<br>(Dataset original antiguo)</td>
         <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/taco1.wav?raw=true" type="audio/mpeg"></audio></td>
         <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/taco2.wav?raw=true" type="audio/mpeg"></audio></td>
         <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/taco3.wav?raw=true" type="audio/mpeg"></audio></td>
         <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/taco4.wav?raw=true" type="audio/mpeg"></audio></td>
+    </tr>
+    <tr>
+        
+        <td><center>Tacotron 2<br>(Dataset nuevo beta)</td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/tacob1.wav?raw=true" type="audio/mpeg"></audio></td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/tacob2.wav?raw=true" type="audio/mpeg"></audio></td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/tacob3.wav?raw=true" type="audio/mpeg"></audio></td>
+        <td><audio controls><source src="https://github.com/xxnessuxx/Projecto-de-clonacion-TTS-del-Neng-de-Castefa/raw/gh-pages/audios/tacob4.wav?raw=true" type="audio/mpeg"></audio></td>
     </tr>
     <tr>
         <td><center>Piper</td>
@@ -121,7 +139,7 @@
 </ul>
 <p>En cuanto a Piper, logró su misión, hacer que hable. Aún así, no es totalmente bueno y los problemas que le veo son:</p>
 <ul>
-	<li>No es el TTS correcto: Piper no está preparado para hacer modelos gritones como tal, ya que trata de neutralizar el habla y crea un grito y habla normal extraño.</li>
+	<li>No es el TTS correcto: Piper no está preparado para hacer modelos gritones como tal, ya que trata de neutralizar el habla y crea un grito y habla normal extraño. El Neng, en especial, no lo alinea bien a sus gritos y por eso esos recortes de voz.</li>
 	<li>Las exclamaciones le hacen sonar cortado: Cuando coloco exclamación, se nota que se sube tanto el tono y el sonido que crea recortes en la voz.</li>
 </ul>
 <hr>
